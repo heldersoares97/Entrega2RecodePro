@@ -1,0 +1,89 @@
+package principalDAO;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import principal.Conexao;
+import principal.Viagem;
+
+
+public class ViagemDAO {
+
+	public ViagemDAO() {}
+	
+    private static Connection conexao;{
+
+        try {
+            conexao = Conexao.conectar();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void criarViagem(Viagem viagem) {
+        String sql = "INSERT INTO viagem (nome, origem_Destino, data_viagem) VALUES (?, ?, ?)";
+        try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
+            stmt.setString(1, viagem.getNome());
+            stmt.setString(2, viagem.getOrigemDestino());
+            stmt.setTimestamp(3, new java.sql.Timestamp(viagem.getDataViagem().getTime()));
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public Viagem buscarViagem (int id) {
+        Viagem Viagem = null;
+        String sql = "SELECT * FROM viagem WHERE id_viagem = ?";
+        try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet resultado = stmt.executeQuery();
+            if (resultado.next()) {
+                Viagem = new Viagem();
+                Viagem.setId(resultado.getInt("id_viagem"));
+                Viagem.setNome(resultado.getString("nome"));
+                Viagem.setOrigemDestino(resultado.getString("origem_Destino"));
+                Viagem.setDataViagem(resultado.getDate("data_viagem"));
+                
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return Viagem;
+    }
+
+    public void atualizarViagem(Viagem viagem) {
+        String sql = "UPDATE viagem SET nome = ?, origem_Destino = ?, data_viagem = ? WHERE id_viagem = ?";
+        try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
+            stmt.setString(1, viagem.getNome());
+            stmt.setString(2, viagem.getOrigemDestino());
+            stmt.setTimestamp(3, new java.sql.Timestamp(viagem.getDataViagem().getTime()));
+            stmt.setInt(4, viagem.getId());
+            stmt.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void fecharConexao() {
+        try {
+            if (conexao != null && !conexao.isClosed()) {
+                conexao.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+	public static Viagem criarViagem(int viagemId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+
+

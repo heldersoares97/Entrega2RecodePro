@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de viagens COMPASS-MG</title>
+    <link rel="stylesheet" href="css/estilo3.css">
+    <script src="javascript/script1.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <main style="width: 100%; margin:auto">
+
+        <div class="header">
+            <img src="imagens/wallpaper_1920x1080.png">
+        </div>
+
+    
+
+        <nav>
+            <div class="navbar">
+
+                <a href="index.html">Home</a>
+
+                <a href="destinos.html">Destinos</a>
+
+                <a href="promocao.html">Promoções</a>
+
+                <a href="contato.html">Contato</a>
+            </div>
+
+        </nav>
+
+    
+
+
+        <div class="row">
+
+
+            <div class="side">
+                <h2>Sobre a Agência de viagem COMPASS-MG</h2>
+
+
+                <div class="main">
+
+
+                    <h2>Viajar é sempre bom!!!</h2>
+
+                    <h4>Abaixo você verá uma tabela de preços</h4>
+
+                    <p>Bem vindo(a) a Agência de viagem COMPASS-MG</p><br>
+
+
+                    <table align="center" border="1" width:"100%" heigth:60%>
+                        <tr align="center">
+                            <td colspan="3">Tabela de preços de viagem</td>
+
+                        </tr>
+
+                        <tr>
+                            <th>Cidades</th>
+                            <th>Local de destino</th>
+                            <th>Preço da viagem</th>
+
+                        </tr>
+
+                        <tr>
+                            <td>São Paulo-SP</td>
+                            <td>Belo Horizonte-MG</td>
+                            <td>valor de R$400,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Belo Horizonte-MG</td>
+                            <td>Salvador-BA</td>
+                            <td>valor de R$900,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Rio de janeiro-RJ</td>
+                            <td>São Paulo-SP</td>
+                            <td>valor de R$300,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Salvador-BA</td>
+                            <td>Rio de Janeiro-RJ</td>
+                            <td>valor de R$950,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Porto Alegre-RS</td>
+                            <td>Recife-PE</td>
+                            <td>valor de R$850,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Recife-PE</td>
+                            <td>Rio de Janeiro-RJ</td>
+                            <td>valor de R$700,00</td>
+                        </tr>
+
+
+                    </table>
+
+                    <h3>Aqui você pode calcular o valor do seu destino de ida e de volta de viagem o preço de ida está na tabela, lembrando que você escreve a origem sua para onde vai e o calculo e feito de ida e volta tudo junto para te ajudar nosso site tem este mecanismo abaixo:</h3>
+
+                    <form id="calculadoraPassagem">
+                        <label for="origem">Origem:</label>
+                        <input type="text" id="origem" name="origem"><br><br>
+                      
+                        <label for="destino">Destinos:</label>
+                        <select id="destino" name="destino">
+                          <option value="destino1">Belo Horizonte-MG</option>
+                          <option value="destino2">Salvador-BA</option>
+                          <option value="destino3">São Paulo-SP</option>
+                          <option value="destino4">Rio de Janeiro-RJ</option>
+                          <option value="destino5">Recife-PE</option>
+                          <option value="destino6">Porto Alegre-RS</option>
+                        </select><br><br>
+                      
+                        <label for="preco">Preço da Passagem:</label>
+                        <input type="number" id="preco" name="preco"><br><br>
+                      
+                        <input type="button" value="Calcular" onclick="calcularPassagem()">
+                      </form>
+                      
+                      <div id="resultado"></div>
+
+                     </div> 
+                      
+
+
+                    <p>
+                    <h2 style="text-align: left; font-family: Arial, Helvetica, sans-serif; color: black; margin-top: 50px;">Formas de
+                        pagamento:</h2>
+                    <img src="imagens/pag_seguro1.webp" alt="formas de pagamento">
+                    </p>
+
+
+
+                </div>
+            </div>
+
+
+
+            <div class="footer">
+
+                <em>
+                    <p style="text-align: center;">&copy;site de viagem COMPASS-MG</p>
+
+                </em>
+
+            </div>
+        
+</body>
+
+</html>

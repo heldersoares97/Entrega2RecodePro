@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="principal.Viagem"/>
+    <fullyQualifiedTypeName name="principalDAO.ClienteDAO"/>
+    <fullyQualifiedTypeName name="principalDAO.ViagemDAO"/>
+    <fullyQualifiedTypeName name="principalDAO.ReservaDAO"/>
+    <fullyQualifiedTypeName name="principal.Cliente"/>
+    <fullyQualifiedTypeName name="principal.Conexao"/>
+    <fullyQualifiedTypeName name="principal.Reserva"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.ParseException"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+</qualifiedTypeNameHistroy>

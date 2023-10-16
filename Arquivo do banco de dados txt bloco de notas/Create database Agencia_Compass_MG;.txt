@@ -1,0 +1,40 @@
+Create database Agencia_Compass_MG;
+
+ 
+
+Use Agencia_Compass_MG;
+
+ 
+
+CREATE TABLE cliente (
+id_cliente int AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255),
+cpf  int(255),
+nacionalidade VARCHAR(255),
+email VARCHAR(255),
+telefone int(255)
+);
+
+ 
+
+CREATE TABLE reserva (
+id_reserva int AUTO_INCREMENT PRIMARY KEY,
+valor_passagem int(255),
+data_embarque Date,
+status_reserva VARCHAR(255),
+id_cliente int
+);
+
+ 
+
+ 
+
+Create TABLE viagem (
+id_viagem int AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR (255),
+origem_Destino VARCHAR(255),
+data_viagem Date
+);
+
+ALTER TABLE reserva ADD FOREIGN KEY(id_cliente) REFERENCES cliente (id_cliente);
+ALTER TABLE reserva MODIFY COLUMN id_cliente int;
